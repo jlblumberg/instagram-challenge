@@ -89,14 +89,11 @@ I want to see what bookings I’ve requested.
 - When these installations are complete, run `bundle`
 
 ### Database setup:
-[See original database plan here](https://user-images.githubusercontent.com/41115973/75557670-5a6d4380-5a38-11ea-920f-5700b61a3624.jpg)
 
-To set up the databases with some seed data, run the following commands:
+To set up the databases, run the following commands:
 
 ```
-rake build_db
-RACK_ENV='test' rake build_db
-RACK_ENV='production' rake build_db
+rails db:migrate
 ```
 
 ### Running the site
