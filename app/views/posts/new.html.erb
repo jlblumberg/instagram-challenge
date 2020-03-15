@@ -1,5 +1,15 @@
 <%= form_for @post do |form| %>
-  <%= form.label :message %>
-  <%= form.text_area :message %>
+
+  <div>
+    <%= form.label :message %>
+    <%= form.text_area :message %>
+  </div>
+
+  <div>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
   <%= form.submit "Submit" %>
+
 <% end %>
