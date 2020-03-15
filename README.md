@@ -11,72 +11,48 @@ Work alone to build instagram from scratch, using Rails.
 
 ## Specifications
 
-Build Instagram using Rails. Needs users who can post pictures, write comments on pictures and like a picture. Styled like instagram itself (or, better!).
+Build Instagram using Rails. There should be users, who can post pictures, write comments on pictures, and like pictures.
 
 ## User Stories
 
-We derived the following user stories from the specifications and test drove them into creation. 
+The following user stories were derived from the specifications. 
 
 ```
 As a user,
-so I can list a space,
-I want to sign up with an email and a password.
+so I can use the app,
+I want to sign up with an email, username, and password.
 
 As a signed-up user, 
 so I can list a space or book a space,
-I want to be able to sign in.
-
-As a signed-in user,
-so I can appeal to my customers,
-I want to list a space.
-
-As a user with a listed space,
-so I can have a portfolio,
-I want to be able to list multiple spaces.
-
-As a user with a listed space,
-so I can make my listings more specific,
-I want to be able to add a short description and price per night.
-
-As a user, 
-so I can choose where I want to stay,
-I want to see a list of all available spaces.
+I want to be able to sign in with my email and password.
 
 As a user,
-so I can see more details on a space,
-I want to see a spaces’ details.
+so I can appeal to my pals,
+I want to make a post.
 
 As a user, 
-so I can manage my spaces,
-I want to see a list of all my spaces.
+so I can give my posts some flare,
+they should have text and an image.
+
+As the site manager,
+so that it's clear what was posted when,
+posts should be listed in reverse chronological order.
+
+As a user,
+so that I can tell who posted what and when, 
+each post should show the posters username and also when it was posted.
+
+As a user with multiple pals,
+so I can showcase my life,
+I want to be able to make multiple posts.
 
 As a user, 
-so that I can log out, 
-I want to have a log-out button that will do so.
+so that I can keep tabs on my pals, 
+when I log in, I want to be shown a list of all posts.
 
-As a user, 
-so that I can’t do illegal things, 
-I want to only be able to visit the site's pages if i'm logged in.
-
-As a user who wants to book,
-so that I can have a fantastic night away,
-I want to be able to book a space for one day.
-
-As a user who wants to book,
-so I can’t book a space which is unavailable,
-I want to only be able to book spaces for dates which are not already booked.
-
-As a user with a listing,
-so that I don’t try to fit too many people on my property,
-I want only allow people to book specified days.
-
-As a user looking to book, 
-so that I can proceed with the booking, 
-I want to be able to submit a booking request.
-
-As a user who has made a booking, 
-so that I can keep track of what I’ve done, 
-I want to see what bookings I’ve requested. 
+As a user,
+so that I can sign out, 
+I want there to be a logout button on the posts page.
 
 ```
 
@@ -85,7 +61,8 @@ I want to see what bookings I’ve requested.
 ### Prerequisite setup:
 - Clone this repo to your local machine and cd into it
 - Run the command `gem install bundle` (if you don't have bundle already)
-- Run the command `brew install postgresql` (if you don't have homebrew installed, do that first. [Instructions here](https://github.com/Homebrew/install))
+- If you don't have homebrew installed, install it. [Instructions here](https://github.com/Homebrew/install)
+- Run `brew install imagemagick` and `brew install ghostscript`
 - When these installations are complete, run `bundle`
 
 ### Database setup:
@@ -93,12 +70,13 @@ I want to see what bookings I’ve requested.
 To set up the databases, run the following commands:
 
 ```
+rails db:create
 rails db:migrate
 ```
 
 ### Running the site
-- Run the server with command `rackup`
-- Visit `localhost:9292` to use the site
+- Run the server with command `rails server`
+- Visit `localhost:3000` to use the site
 
 ### Testing
 - Tests can be run using Rspec. Run the command `rspec`
@@ -109,38 +87,19 @@ Front-end:
 - HTML & CSS
 
 Back-end:
-- Ruby
-- Sinatra
-- PostgreSQL
+- Rails
+- SQLite
 - ActiveRecord
 
 Testing:
 - RSpec
 - Capybara
-- SimpleCov
+
+Linting:
+- Rubocop for Rails
 
 ## <a name="Examples">Examples</a>
 
-Once you have signed up you can then log in:
-
-![Sign-up](https://i.imgur.com/iVKlJYH.png)
-
-Logging in takes you to a list of the places available for booking:
-
-![Spaces](https://i.imgur.com/zJayKPp.png)
-
-You can click on more details to view all the details of a space and to submit a booking request:
-
-![More-details](https://i.imgur.com/1j3vdbM.png)
-
-It will only let you book if the space is available: 
-
-![Warning](https://i.imgur.com/J0Gw0WM.png)
-
-Once you have booked you can see a list of your booking requests and their current status:
-
-![My-bookings](https://i.imgur.com/sMepFzm.png)
-
 ## <a name="Future_work">Future work</a>
 
-On a revisit of the project, we would build a system to allow for booking requests to be approved by the space's owner. Unfortunately we didn't have time to finish this feature, but we did build the tests for it. You can see the commented out tests in 'spec/features/approve_request_spec.rb' and 'spec/features/displaying_booking_requests_spec.rb'.
+On a revisit of the project, I would build in comments and likes on posts, as unfortunately I didn't have time to do so. 
