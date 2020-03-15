@@ -1,15 +1,13 @@
-<div>
-<%= link_to new_post_path do %>
-  New post
-<% end %>
-</div>
+<h1>Posts</h1>
+
+<div><%= link_to 'New post' new_post_path %></div>
 
 <div>
 <% @posts.order(created_at: :desc).each do |post| %>
 
+  <p><%= User.find_by(id: post.user_id).username %> | <%= post.created_at.strftime('%e %B at %H:%M') %></p>
+  
   <p><%= post.message %></p>
-  <p><%= User.find_by(id: post.user_id).username %></p>
-  <p><%= post.created_at.strftime('%e %B at %H:%M') %></p>
   <p> ___________________________________________ </p>
   
 <% end %>
