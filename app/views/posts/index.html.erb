@@ -6,7 +6,7 @@
 <% @posts.order(created_at: :desc).each do |post| %>
 
   <p><%= User.find_by(id: post.user_id).username %> ... <%= post.created_at.strftime('%e %B at %H:%M') %></p>
-  <p><%= image_tag(post.image.url, alt: 'Image') if post.image? %>
+  <p><%= image_tag(post.image.thumb.url, alt: 'Image') if post.image? %>
   <p><%= post.message %></p>
   <p> ___________________________________________ </p>
   
