@@ -100,4 +100,4 @@ Linting:
 
 ## <a name="Future_work">Future work</a>
 
-On a revisit of the project, I would build in comments and likes on posts, as unfortunately I didn't have time to do so. 
+On a revisit of the project, I would like to build in comments and likes on posts as those features have not yet been built.
