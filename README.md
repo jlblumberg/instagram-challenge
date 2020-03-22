@@ -3,17 +3,17 @@
 Instagram Rails Challenge - original README [here](https://github.com/makersacademy/instagram-challenge/blob/master/README.md)
 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-[Outline](#Outline) | [Specifications](#Specifications) | [User Stories](#User_Stories) | [Installation Instructions](#Installation_Instructions) | [Tech stack](#Tech_stack) | [Examples](#Examples) | [Future work](#Future_work)
+[Outline](#Outline) | [Specifications](#Specifications) | [User Stories](#User_Stories) | [Installation Instructions](#Installation_Instructions) | [Tech stack](#Tech_stack) | [Future work](#Future_work)
 
 ## <a name="Outline">Outline</a>
 
 Work alone to build instagram from scratch, using Rails. 
 
-## Specifications
+## <a name="Specifications">Specifications</a>
 
 Build Instagram using Rails. There should be users, who can post pictures, write comments on pictures, and like pictures.
 
-## User Stories
+## <a name="User_Stories">User Stories</a>
 
 The following user stories were derived from the specifications. 
 
@@ -97,8 +97,6 @@ Testing:
 
 Linting:
 - Rubocop for Rails
-
-## <a name="Examples">Examples</a>
 
 ## <a name="Future_work">Future work</a>
 
